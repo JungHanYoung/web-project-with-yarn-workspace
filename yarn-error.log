@@ -1,8 +1,8 @@
 Arguments: 
-  /Users/hanyoungjeong/.nvm/versions/node/v10.15.3/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js init -
+  /Users/hanyoungjeong/.nvm/versions/node/v10.15.3/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js workspace my-sub-module add typescript -D
 
 PATH: 
-  /Library/Frameworks/Python.framework/Versions/3.7/bin:/Users/hanyoungjeong/.nvm/versions/node/v10.15.3/bin:/Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/bin:/Users/hanyoungjeong/Library/Android/sdk/tools:/Users/hanyoungjeong/Library/Android/sdk/platform-tools:/Users/hanyoungjeong/Library/Android/sdk/build-tools/23.0.1:/usr/local/go/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin
+  /Library/Frameworks/Python.framework/Versions/3.7/bin:/Users/hanyoungjeong/.nvm/versions/node/v10.15.3/bin:/Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/bin:/Users/hanyoungjeong/Library/Android/sdk/tools:/Users/hanyoungjeong/Library/Android/sdk/platform-tools:/Users/hanyoungjeong/Library/Android/sdk/build-tools/23.0.1:/usr/local/go/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/Users/hanyoungjeong/.nvm/versions/node/v10.15.3/bin:/Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/bin:/Users/hanyoungjeong/Library/Android/sdk/tools:/Users/hanyoungjeong/Library/Android/sdk/platform-tools:/Users/hanyoungjeong/Library/Android/sdk/build-tools/23.0.1
 
 Yarn version: 
   1.5.1
@@ -14,7 +14,18 @@ Platform:
   darwin x64
 
 npm manifest: 
-  No manifest
+  {
+    "name": "workspace_yarn",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "private": true,
+    "workspaces": {
+      "packages": [
+        "packages/*"
+      ]
+    }
+  }
 
 yarn manifest: 
   No manifest
@@ -23,14 +34,9 @@ Lockfile:
   No lockfile
 
 Trace: 
-  Error: canceled
-      at Interface.<anonymous> (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:128791:13)
-      at Interface.emit (events.js:189:13)
-      at Interface._ttyWrite (readline.js:783:16)
-      at ReadStream.onkeypress (readline.js:168:10)
-      at ReadStream.emit (events.js:189:13)
-      at emitKeys (internal/readline.js:424:14)
-      at emitKeys.next (<anonymous>)
-      at ReadStream.onData (readline.js:1022:36)
-      at ReadStream.emit (events.js:189:13)
-      at addChunk (_stream_readable.js:284:12)
+  Error: Unknown workspace "my-sub-module".
+      at new MessageError (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:186:110)
+      at Object.<anonymous> (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:88425:13)
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:98:30)
+      at /usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:109:13
