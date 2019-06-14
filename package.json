@@ -11,7 +11,8 @@
   },
   "devDependencies": {
     "concurrently": "^4.1.0",
-    "typescript": "^3.5.2"
+    "typescript": "^3.5.2",
+    "webpack-cli": "^3.3.4"
   },
   "scripts": {
     "start": "concurrently -n \"SERVER\" -c \"bgBlue.bold\" \"node packages/server\""
